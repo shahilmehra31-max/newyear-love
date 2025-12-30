@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy New Year ❤️</title>
+  <style>
+    body{
+      margin:0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg,#ff758c,#ff7eb3);
+      color:white;
+      text-align:center;
+      overflow:hidden;
+    }
+    .page{
+      display:none;
+      height:100vh;
+      padding:40px 20px;
+      box-sizing:border-box;
+    }
+    .page.active{
+      display:block;
+      animation: fade 1s;
+    }
+    @keyframes fade{
+      from{opacity:0; transform:translateY(20px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+    button{
+      margin-top:30px;
+      padding:12px 25px;
+      font-size:16px;
+      border:none;
+      border-radius:25px;
+      background:white;
+      color:#ff4d6d;
+      cursor:pointer;
+    }
+    h1{font-size:32px;}
+    p{font-size:18px; line-height:1.6;}
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div class="page active" id="p1">
+    <h1>🎉 Happy New Year ❤️</h1>
+    <p>Jab tum ye page khol rahi ho,
+    tab shayad hum miles door honge…
+    par mera dil sirf tumhare paas hai 💫</p>
+    <button onclick="nextPage(2)">Next ➜</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="page" id="p2">
+    <h1>💌 My Love Language</h1>
+    <p>
+      Main shayad roz flowers na bhej paun 🌹<br>
+      par har din tumhari fikr karta hoon ❤️<br><br>
+      Main shayad paas na ho paun 🤍<br>
+      par har saans me tumhara naam hota hai ✨
+    </p>
+    <button onclick="nextPage(3)">Next ➜</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="page" id="p3">
+    <h1>💖 Just Us</h1>
+    <p>
+      Ye naya saal meri life ka nahi,
+      <br>hamari kahani ka next chapter hai ✨<br><br>
+      Distance sirf map pe hai,
+      <br>dil to kab se tumhara ho chuka hai ❤️
+    </p>
+    <button onclick="nextPage(4)">Next ➜</button>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="page" id="p4">
+    <h1>🌙 One Promise</h1>
+    <p>
+      Chahe 2026 ho ya uske baad ke saal…
+      <br>main tumhara haath kabhi nahi chhodunga 🤝❤️
+      <br><br>
+      Happy New Year meri jaan 🎆💫
+    </p>
+  </div>
+
+<script>
+  function nextPage(n){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById('p'+n).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
